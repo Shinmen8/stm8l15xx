@@ -54,26 +54,26 @@ Settings.1.7=Root.Config.1.Settings.7
 Settings.1.8=Root.Config.1.Settings.8
 
 [Root.Config.0.Settings.0]
-String.6.0=2010,6,7,11,49,37
+String.6.0=2016,1,13,19,36,15
 String.100.0=ST Assembler Linker
 String.100.1=ST7 Cosmic
 String.100.2=STM8 Cosmic
 String.100.3=ST7 Metrowerks V1.1
 String.100.4=Raisonance
 String.101.0=STM8 Cosmic
-String.102.0=C:\Program Files (x86)\COSMIC\32K_Compilers
+String.102.0=C:\Program Files (x86)\COSMIC\32K_Compilers\CXSTM8
 String.103.0=
 String.104.0=Hstm8
 String.105.0=Lib
 String.106.0=Debug
 String.107.0=$(ProjectSFile).elf
-Int.108=0
+Int.108=1
 
 [Root.Config.0.Settings.1]
 String.6.0=2010,6,7,11,47,28
 String.100.0=$(TargetFName)
 String.101.0=
-String.103.0=.\;..\..;..\..\inc;..\..\src;
+String.103.0=.\;..\..;..\..\inc;..\..\src;..\..\stm8l15x_stdperiph_driver\inc;..\..\stm8l15x_stdperiph_driver\src;
 
 [Root.Config.0.Settings.2]
 String.2.0=
@@ -82,7 +82,7 @@ String.100.0=STM8L152C6
 
 [Root.Config.0.Settings.3]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -i..\..\inc -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc -i..\.. -customDbg -customDebCompat -no -customLst -l +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -i..\..\stm8l15x_stdperiph_driver\inc  -i..\..\inc -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc -i..\.. -customDbg -customDebCompat -no -customLst -l +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2010,6,7,11,47,28
@@ -154,7 +154,7 @@ Int.108=0
 String.6.0=2010,6,7,11,47,28
 String.100.0=$(TargetFName)
 String.101.0=
-String.103.0=.\;..\..;..\..\inc;..\..\src;
+String.103.0=.\;..\..;..\..\inc;..\..\src;..\..\stm8l15x_stdperiph_driver\inc;..\..\stm8l15x_stdperiph_driver\src;
 
 [Root.Config.1.Settings.2]
 String.2.0=
@@ -163,7 +163,7 @@ String.100.0=STM8L152C6
 
 [Root.Config.1.Settings.3]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -i..\..\inc  -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc  -i..\..  +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile) 
+String.3.0=cxstm8 -i..\..\stm8l15x_stdperiph_driver\inc  -i..\..\inc  -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc  -i..\..  +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile) 
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2010,6,7,11,47,28
@@ -241,7 +241,7 @@ Int.1=0
 
 [Root.STM8L15x_StdPeriph_Driver.Config.0.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -i..\..\inc -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc -i..\.. -customDbg -customDebCompat -no -customLst -l +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -i..\..\stm8l15x_stdperiph_driver\inc  -i..\..\inc -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc -i..\.. -customDbg -customDebCompat -no -customLst -l +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2010,6,7,11,47,28
@@ -268,7 +268,7 @@ Int.1=0
 
 [Root.STM8L15x_StdPeriph_Driver.Config.1.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -i..\..\inc  -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc  -i..\..  +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile) 
+String.3.0=cxstm8 -i..\..\stm8l15x_stdperiph_driver\inc  -i..\..\inc  -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc  -i..\..  +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile) 
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2010,6,7,11,47,28
@@ -290,6 +290,7 @@ String.6.0=2010,6,7,11,47,28
 [Root.STM8L15x_StdPeriph_Driver.STM8L15x_StdPeriph_Driver\inc]
 ElemType=Folder
 PathName=STM8L15x_StdPeriph_Driver\inc
+Child=Root.STM8L15x_StdPeriph_Driver.STM8L15x_StdPeriph_Driver\inc...\..\stm8l15x_stdperiph_driver\inc\stm8l15x.h
 Next=Root.STM8L15x_StdPeriph_Driver.STM8L15x_StdPeriph_Driver\src
 Config.0=Root.STM8L15x_StdPeriph_Driver.STM8L15x_StdPeriph_Driver\inc.Config.0
 Config.1=Root.STM8L15x_StdPeriph_Driver.STM8L15x_StdPeriph_Driver\inc.Config.1
@@ -314,7 +315,7 @@ Int.1=0
 
 [Root.STM8L15x_StdPeriph_Driver.STM8L15x_StdPeriph_Driver\inc.Config.0.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -i..\..\inc  -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc  -i..\..  -customDbg -customDebCompat -no -customLst -l +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -i..\..\stm8l15x_stdperiph_driver\inc  -i..\..\inc  -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc  -i..\..  -customDbg -customDebCompat -no -customLst -l +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2010,6,7,11,47,28
@@ -341,7 +342,7 @@ Int.1=0
 
 [Root.STM8L15x_StdPeriph_Driver.STM8L15x_StdPeriph_Driver\inc.Config.1.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -i..\..\inc  -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc  -i..\..  +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile) 
+String.3.0=cxstm8 -i..\..\stm8l15x_stdperiph_driver\inc  -i..\..\inc  -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc  -i..\..  +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile) 
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2010,6,7,11,47,28
@@ -360,9 +361,19 @@ String.4.0=
 String.5.0=
 String.6.0=2010,6,7,11,47,28
 
+[Root.STM8L15x_StdPeriph_Driver.STM8L15x_StdPeriph_Driver\inc...\..\stm8l15x_stdperiph_driver\inc\stm8l15x.h]
+ElemType=File
+PathName=..\..\stm8l15x_stdperiph_driver\inc\stm8l15x.h
+Next=Root.STM8L15x_StdPeriph_Driver.STM8L15x_StdPeriph_Driver\inc...\..\stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h
+
+[Root.STM8L15x_StdPeriph_Driver.STM8L15x_StdPeriph_Driver\inc...\..\stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h]
+ElemType=File
+PathName=..\..\stm8l15x_stdperiph_driver\inc\stm8l15x_gpio.h
+
 [Root.STM8L15x_StdPeriph_Driver.STM8L15x_StdPeriph_Driver\src]
 ElemType=Folder
 PathName=STM8L15x_StdPeriph_Driver\src
+Child=Root.STM8L15x_StdPeriph_Driver.STM8L15x_StdPeriph_Driver\src...\..\stm8l15x_stdperiph_driver\src\stm8l15x_gpio.c
 Config.0=Root.STM8L15x_StdPeriph_Driver.STM8L15x_StdPeriph_Driver\src.Config.0
 Config.1=Root.STM8L15x_StdPeriph_Driver.STM8L15x_StdPeriph_Driver\src.Config.1
 
@@ -386,7 +397,7 @@ Int.1=0
 
 [Root.STM8L15x_StdPeriph_Driver.STM8L15x_StdPeriph_Driver\src.Config.0.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -i..\..\inc  -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc  -i..\..  -customDbg -customDebCompat -no -customLst -l +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -i..\..\stm8l15x_stdperiph_driver\inc  -i..\..\inc  -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc  -i..\..  -customDbg -customDebCompat -no -customLst -l +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2010,6,7,11,47,28
@@ -413,7 +424,7 @@ Int.1=0
 
 [Root.STM8L15x_StdPeriph_Driver.STM8L15x_StdPeriph_Driver\src.Config.1.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -i..\..\inc  -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc  -i..\..  +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile) 
+String.3.0=cxstm8 -i..\..\stm8l15x_stdperiph_driver\inc  -i..\..\inc  -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc  -i..\..  +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile) 
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2010,6,7,11,47,28
@@ -431,6 +442,10 @@ String.3.0=
 String.4.0=
 String.5.0=
 String.6.0=2010,6,7,11,47,28
+
+[Root.STM8L15x_StdPeriph_Driver.STM8L15x_StdPeriph_Driver\src...\..\stm8l15x_stdperiph_driver\src\stm8l15x_gpio.c]
+ElemType=File
+PathName=..\..\stm8l15x_stdperiph_driver\src\stm8l15x_gpio.c
 
 [Root.User]
 ElemType=Folder
@@ -459,7 +474,7 @@ Int.1=0
 
 [Root.User.Config.0.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -i..\..\inc -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc -i..\.. -customDbg -customDebCompat -no -customLst -l +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -i..\..\stm8l15x_stdperiph_driver\inc  -i..\..\inc -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc -i..\.. -customDbg -customDebCompat -no -customLst -l +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2010,6,7,11,47,28
@@ -486,7 +501,7 @@ Int.1=0
 
 [Root.User.Config.1.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -i..\..\inc  -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc  -i..\..  +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile) 
+String.3.0=cxstm8 -i..\..\stm8l15x_stdperiph_driver\inc  -i..\..\inc  -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc  -i..\..  +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile) 
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2010,6,7,11,47,28
@@ -533,7 +548,7 @@ Int.1=0
 
 [Root.User.User\inc.Config.0.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -i..\..\inc  -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc  -i..\..  -customDbg -customDebCompat -no -customLst -l +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 -i..\..\stm8l15x_stdperiph_driver\inc  -i..\..\inc  -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc  -i..\..  -customDbg -customDebCompat -no -customLst -l +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2010,6,7,11,47,28
@@ -560,7 +575,7 @@ Int.1=0
 
 [Root.User.User\inc.Config.1.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -i..\..\inc  -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc  -i..\..  +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile) 
+String.3.0=cxstm8 -i..\..\stm8l15x_stdperiph_driver\inc  -i..\..\inc  -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc  -i..\..  +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile) 
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
 String.6.0=2010,6,7,11,47,28
@@ -592,174 +607,12 @@ Child=Root.User.User\src...\..\src\main.c
 ElemType=File
 PathName=..\..\src\main.c
 Next=Root.User.User\src...\..\src\stm8_interrupt_vector.c
-Config.0=Root.User.User\src...\..\src\main.c.Config.0
-Config.1=Root.User.User\src...\..\src\main.c.Config.1
-
-[Root.User.User\src...\..\src\main.c.Config.0]
-Settings.0.0=Root.User.User\src...\..\src\main.c.Config.0.Settings.0
-Settings.0.1=Root.User.User\src...\..\src\main.c.Config.0.Settings.1
-Settings.0.2=Root.User.User\src...\..\src\main.c.Config.0.Settings.2
-
-[Root.User.User\src...\..\src\main.c.Config.1]
-Settings.1.0=Root.User.User\src...\..\src\main.c.Config.1.Settings.0
-Settings.1.1=Root.User.User\src...\..\src\main.c.Config.1.Settings.1
-Settings.1.2=Root.User.User\src...\..\src\main.c.Config.1.Settings.2
-
-[Root.User.User\src...\..\src\main.c.Config.0.Settings.0]
-String.6.0=2010,7,23,15,0,10
-String.8.0=Debug
-Int.0=0
-Int.1=0
-
-[Root.User.User\src...\..\src\main.c.Config.0.Settings.1]
-String.2.0=Performing Custom Build on $(InputFile)
-String.3.0=
-String.4.0=
-String.5.0=
-String.6.0=2010,6,7,11,47,28
-
-[Root.User.User\src...\..\src\main.c.Config.0.Settings.2]
-String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -i..\..\inc  -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc  -i..\..  -customDbg -customDebCompat -no -customLst -l +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
-String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
-String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2010,6,7,11,47,28
-String.8.0=Debug
-
-[Root.User.User\src...\..\src\main.c.Config.1.Settings.0]
-String.6.0=2010,7,23,15,0,10
-String.8.0=Release
-Int.0=0
-Int.1=0
-
-[Root.User.User\src...\..\src\main.c.Config.1.Settings.1]
-String.2.0=Performing Custom Build on $(InputFile)
-String.3.0=
-String.4.0=
-String.5.0=
-String.6.0=2010,6,7,11,47,28
-
-[Root.User.User\src...\..\src\main.c.Config.1.Settings.2]
-String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -i..\..\inc  -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc  -i..\..  +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile) 
-String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
-String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2010,6,7,11,47,28
-String.8.0=Release
 
 [Root.User.User\src...\..\src\stm8_interrupt_vector.c]
 ElemType=File
 PathName=..\..\src\stm8_interrupt_vector.c
 Next=Root.User.User\src...\..\src\stm8l15x_it.c
-Config.0=Root.User.User\src...\..\src\stm8_interrupt_vector.c.Config.0
-Config.1=Root.User.User\src...\..\src\stm8_interrupt_vector.c.Config.1
-
-[Root.User.User\src...\..\src\stm8_interrupt_vector.c.Config.0]
-Settings.0.0=Root.User.User\src...\..\src\stm8_interrupt_vector.c.Config.0.Settings.0
-Settings.0.1=Root.User.User\src...\..\src\stm8_interrupt_vector.c.Config.0.Settings.1
-Settings.0.2=Root.User.User\src...\..\src\stm8_interrupt_vector.c.Config.0.Settings.2
-
-[Root.User.User\src...\..\src\stm8_interrupt_vector.c.Config.1]
-Settings.1.0=Root.User.User\src...\..\src\stm8_interrupt_vector.c.Config.1.Settings.0
-Settings.1.1=Root.User.User\src...\..\src\stm8_interrupt_vector.c.Config.1.Settings.1
-Settings.1.2=Root.User.User\src...\..\src\stm8_interrupt_vector.c.Config.1.Settings.2
-
-[Root.User.User\src...\..\src\stm8_interrupt_vector.c.Config.0.Settings.0]
-String.6.0=2010,7,23,15,0,10
-String.8.0=Debug
-Int.0=0
-Int.1=0
-
-[Root.User.User\src...\..\src\stm8_interrupt_vector.c.Config.0.Settings.1]
-String.2.0=Performing Custom Build on $(InputFile)
-String.3.0=
-String.4.0=
-String.5.0=
-String.6.0=2010,6,7,11,47,28
-
-[Root.User.User\src...\..\src\stm8_interrupt_vector.c.Config.0.Settings.2]
-String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -i..\..\inc  -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc  -i..\..  -customDbg -customDebCompat -no -customLst -l +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
-String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
-String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2010,6,7,11,47,28
-String.8.0=Debug
-
-[Root.User.User\src...\..\src\stm8_interrupt_vector.c.Config.1.Settings.0]
-String.6.0=2010,7,23,15,0,10
-String.8.0=Release
-Int.0=0
-Int.1=0
-
-[Root.User.User\src...\..\src\stm8_interrupt_vector.c.Config.1.Settings.1]
-String.2.0=Performing Custom Build on $(InputFile)
-String.3.0=
-String.4.0=
-String.5.0=
-String.6.0=2010,6,7,11,47,28
-
-[Root.User.User\src...\..\src\stm8_interrupt_vector.c.Config.1.Settings.2]
-String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -i..\..\inc  -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc  -i..\..  +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile) 
-String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
-String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2010,6,7,11,47,28
-String.8.0=Release
 
 [Root.User.User\src...\..\src\stm8l15x_it.c]
 ElemType=File
 PathName=..\..\src\stm8l15x_it.c
-Config.0=Root.User.User\src...\..\src\stm8l15x_it.c.Config.0
-Config.1=Root.User.User\src...\..\src\stm8l15x_it.c.Config.1
-
-[Root.User.User\src...\..\src\stm8l15x_it.c.Config.0]
-Settings.0.0=Root.User.User\src...\..\src\stm8l15x_it.c.Config.0.Settings.0
-Settings.0.1=Root.User.User\src...\..\src\stm8l15x_it.c.Config.0.Settings.1
-Settings.0.2=Root.User.User\src...\..\src\stm8l15x_it.c.Config.0.Settings.2
-
-[Root.User.User\src...\..\src\stm8l15x_it.c.Config.1]
-Settings.1.0=Root.User.User\src...\..\src\stm8l15x_it.c.Config.1.Settings.0
-Settings.1.1=Root.User.User\src...\..\src\stm8l15x_it.c.Config.1.Settings.1
-Settings.1.2=Root.User.User\src...\..\src\stm8l15x_it.c.Config.1.Settings.2
-
-[Root.User.User\src...\..\src\stm8l15x_it.c.Config.0.Settings.0]
-String.6.0=2010,7,23,15,0,10
-String.8.0=Debug
-Int.0=0
-Int.1=0
-
-[Root.User.User\src...\..\src\stm8l15x_it.c.Config.0.Settings.1]
-String.2.0=Performing Custom Build on $(InputFile)
-String.3.0=
-String.4.0=
-String.5.0=
-String.6.0=2010,6,7,11,47,28
-
-[Root.User.User\src...\..\src\stm8l15x_it.c.Config.0.Settings.2]
-String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -i..\..\inc  -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc  -i..\..  -customDbg -customDebCompat -no -customLst -l +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
-String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
-String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2010,6,7,11,47,28
-String.8.0=Debug
-
-[Root.User.User\src...\..\src\stm8l15x_it.c.Config.1.Settings.0]
-String.6.0=2010,7,23,15,0,10
-String.8.0=Release
-Int.0=0
-Int.1=0
-
-[Root.User.User\src...\..\src\stm8l15x_it.c.Config.1.Settings.1]
-String.2.0=Performing Custom Build on $(InputFile)
-String.3.0=
-String.4.0=
-String.5.0=
-String.6.0=2010,6,7,11,47,28
-
-[Root.User.User\src...\..\src\stm8l15x_it.c.Config.1.Settings.2]
-String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 -i..\..\inc  -i..\..\..\..\libraries\stm8l15x_stdperiph_driver\inc  -i..\..  +mods0 -customC-pp $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile) 
-String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
-String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2010,6,7,11,47,28
-String.8.0=Release

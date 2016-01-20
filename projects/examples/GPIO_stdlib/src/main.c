@@ -1,12 +1,16 @@
 /**
   GPIO toggle example 
+	on this exammple we will use the stm8l15x.h driver to play with the general purpose inputs outpus peripheral
 	
+	
+	How to set up.
+	a)copy paste the template project with your prefered name.
+	b)add the stdlib files in the project
+	c)go to stm8l151 and chouse the target device type 
+	d)go to stm8l15x_conf.h file and uncomment the device drivers you want to use.
+	e)have fun!
   */ 
 	
-/* Includes ------------------------------------------------------------------*/
-#include "stm8l15x.h"
-
-
 
 
 
