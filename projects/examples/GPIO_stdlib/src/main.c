@@ -24,13 +24,14 @@ void Delay (uint16_t nCount);
 void main(void)
 {
   /* Initialize LEDs mounted on STM8L152X-EVAL board */
-  GPIO_Init(GPIOC, GPIO_Pin_7, GPIO_Mode_Out_PP_Low_Fast);
+  GPIO_Init(GPIOB, GPIO_Pin_2, GPIO_Mode_Out_PP_Low_Fast);
 
   while (1)
   {
     /* Toggle LEDs LD1..LD4 */
-    GPIO_ToggleBits(GPIOC, GPIO_Pin_7);
+    GPIO_ToggleBits(GPIOB, GPIO_Pin_2);
     Delay(0xFFFF);
+		//Delay(0xFFFF);
   }
 }
 

@@ -20,7 +20,7 @@
   */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __STM8L15x_H
+
  #define __STM8L15x_H
 
 /** @addtogroup STM8L15x_StdPeriph_Driver
@@ -49,9 +49,9 @@
 
  */
 
-#if !defined (STM8L15X_MD) && !defined (STM8L15X_MDP) && !defined (STM8L15X_HD)
- #error "Please select first the target STM8L device used in your application (in stm8l15x.h file)"
-#endif
+//#if !defined (STM8L15X_MD) && !defined (STM8L15X_MDP) && !defined (STM8L15X_HD)
+ //#error "Please select first the target STM8L device used in your application (in stm8l15x.h file)"
+//#endif
 
 /******************************************************************************/
 /*                   Library configuration section                            */
@@ -172,7 +172,7 @@
 /** @addtogroup Exported_types
   * @{
   */
-
+/*
 /**
  * IO definitions
  *
@@ -199,8 +199,8 @@ typedef int16_t s16;
 typedef int8_t  s8;
 
 typedef uint32_t  u32;
-typedef uint16_t u16;
-typedef uint8_t  u8;
+//typedef uint16_t u16;
+//typedef uint8_t  u8;
 
 
 typedef enum {FALSE = 0, TRUE = !FALSE} bool;
@@ -2729,7 +2729,7 @@ AES_TypeDef;
 #define OPT                         ((OPT_TypeDef *) OPT_BASE)
 
 #ifdef USE_STDPERIPH_DRIVER 
- #include "stm8l15x_conf.h"
+// #include "stm8l15x_conf.h"
 #endif
 
 /* Exported macro --------------------------------------------------------------*/
@@ -2850,7 +2850,7 @@ Comments :    The idea is to handle directly with the bit name. For that, it is
 #define BitVal(BIT)  ( *((unsigned char *) (AREA+(BIT)/8)) & (1<<(7-(BIT)%8)) )
 
 
-#endif /* __STM8L15x_H */
+//#endif /* __STM8L15x_H */
 
 /**
   * @}
